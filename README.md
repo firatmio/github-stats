@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+# GitHub Stats in TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue.svg)  ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+A modern **GitHub statistics viewer** built with TypeScript, React, and Vite.
+Displays interactive GitHub profile stats for any user, including commits, repos, languages, streaks, and trophies.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+* Visualize GitHub stats in a clean UI
+* Show top languages, commits, followers, and PRs
+* GitHub streak tracking
+* GitHub trophies display
+* Ready for README or frontend integration
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Technologies Used
+
+* **Frontend:** React, TypeScript, Vite
+* **Code Quality:** ESLint
+* **Data Fetching:** GitHub API
+* **Styling:** CSS / Tailwind optional
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js (v18+ recommended)
+* npm or yarn
+
+---
+
+### Installation & Running
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/firatmio/github-stats.git
+cd github-stats
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. Run in development mode:
+
+```bash
+npm run dev
+```
+
+4. Build & run in production:
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## Example Usage
+
+Embed GitHub stats in your README:
+
+```markdown
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=firatmio)
+```
+
+Other cards (top languages, streaks, trophies) can be added similarly.
+
+---
+
+## Project Structure
+
+```
+github-stats/
+├── src/
+│   ├── main.tsx          # Entry point
+│   ├── App.tsx           # Main component
+│   ├── components/       # UI components
+│   ├── services/         # GitHub API services
+├── package.json          # Project metadata
+├── tsconfig.json         # TypeScript config
+├── vite.config.ts        # Vite config
+├── LICENSE               # MIT License
+└── README.md             # Project documentation
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
