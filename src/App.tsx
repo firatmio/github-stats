@@ -1,9 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import "./App.css";
-import Graphs from "./components/Graphs";
 import Header from "./components/Header";
-import PinnedRepos from "./components/PinnedRepos";
 import StatsCards from "./components/StatsCards";
 
 function App() {
@@ -30,7 +28,7 @@ function App() {
     <div className="container">
       {!user && (
         <>
-          <h1>GitHub Dashboard</h1>
+          <h1>GitHub Stats</h1>
           <div className="search">
             <input
               type="text"
@@ -38,7 +36,7 @@ function App() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <button onClick={fetchData}>Ara</button>
+            <button onClick={fetchData}>Search</button>
           </div>
         </>
       )}
@@ -48,8 +46,6 @@ function App() {
         <>
           <Header user={user} />
           <StatsCards user={user} repos={repos} />
-          <PinnedRepos repos={repos} />
-          <Graphs repos={repos} />
         </>
       )}
     </div>

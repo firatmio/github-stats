@@ -4,7 +4,6 @@ interface Props {
 }
 
 export default function StatsCards({ user, repos }: Props) {
-    // toplam commit tahmini
     const totalCommits = repos.reduce((sum, repo) => sum + (repo?.size || 0), 0);
 
     return (
