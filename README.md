@@ -69,18 +69,6 @@ npm start
 
 ---
 
-## Example Usage
-
-Embed GitHub stats in your README:
-
-```markdown
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=firatmio)
-```
-
-Other cards (top languages, streaks, trophies) can be added similarly.
-
----
-
 ## Project Structure
 
 ```
