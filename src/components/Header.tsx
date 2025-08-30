@@ -1,3 +1,5 @@
+import { IoClose } from "react-icons/io5";
+
 interface Props {
   user: any;
 }

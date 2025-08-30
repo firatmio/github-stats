@@ -69,6 +69,11 @@ button:hover {
   align-items: flex-start;
   margin-bottom: 4rem;
   gap: 2rem;
+  overflow: visible;
+}
+
+.header button:hover {
+  background-color: rgba(255, 255, 255, .05);
 }
 
 .header img {
@@ -120,4 +125,74 @@ button:hover {
   justify-content: space-between;
   flex-direction: row;
   width: 280px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  left: 0;
+  justify-content: center;
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  color: rgba(255, 255, 255, .45);
+  font-size: 16px;
+}
+
+footer code {
+  margin: 0 6px;
+  background-color: rgba(255, 255, 255, .05);
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: monospace;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  justify-content: center;
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  color: rgba(255, 255, 255, .45);
+  font-size: 16px;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-bottom: 2rem;
+}
+
+header div{
+  background-color: rgba(255, 255, 255, .025);
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header code {
+  margin: 0 6px;
+  background-color: rgba(255, 255, 255, .05);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: monospace;
+  border: 1px solid rgba(255, 255, 255, .05);
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+header code:hover {
+  background-color: rgba(255,255,255,.1);
+}
+
+header code:active {
+  background-color: rgba(255,255,255,.15);
 }
