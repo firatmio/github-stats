@@ -60,7 +60,7 @@ function App() {
               }}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <button onClick={(e) => {
+            <button onClick={() => {
               fetchData();
               setUsername('');
             }}>Search</button>
